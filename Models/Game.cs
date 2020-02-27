@@ -9,18 +9,20 @@ namespace TextGame.Models
         public string Player{ get; set; }
         public string Items{ get; set; }
         public int Tries{ get; set; }
+        public string Difficulty{ get; set; }
 
 
-        public Game(bool fate, string player, int tries)
+        public Game(bool fate, string player, int tries, string difficulty)
         {
             Player = player;
             Fate = fate;
             Tries = tries;
+            Difficulty = difficulty;
         }
 
-        public void StartGame(string newPlayer, int tries)
+        public void StartGame(string newPlayer, int tries, string newDifficulty)
         {
-            // Difficulty = newDifficulty;
+            Difficulty = newDifficulty;
             Player = newPlayer;
         }
 
@@ -154,7 +156,14 @@ namespace TextGame.Models
         public void SceneFour(string hack, string newPlayer)
         {
             Console.WriteLine("*In order to hack into Facless's MAINFRAME, you must solve the following three riddles correctly.*");
+            if (newDifficulty == "blue")
+            {
             Riddle1(newPlayer);
+            }
+            else if (newDifficulty == "red")
+            {
+            Riddle4(newPlayer);
+            }
         }    
             
         private void Riddle1(string newPlayer)
@@ -244,6 +253,95 @@ namespace TextGame.Models
             }
         }
             
+
+
+   private void Riddle4(string newPlayer)
+        {
+            string response4 = "";
+            string riddle4 = "Translate the following: - .... . .-. . / .. ... / -. --- / ... .--. --- --- -.");
+            if (Tries != 3)
+            {
+            Console.WriteLine(riddle4);
+            response4 = Console.ReadLine();
+            }
+            
+            if (Tries == 3)
+            {
+                CheckTries();
+            }
+            else if (response4 != "there is no spoon" && Tries != 3)
+            {
+                IncreaseTries();
+                Console.WriteLine("Wrong! Try again!");
+                Console.WriteLine(Tries);
+                CheckTries();
+                Riddle4(newPlayer);
+            }
+            else if (response4 == "there is no spoon")
+            {
+                Console.WriteLine("That is correct!");
+                Riddle5(newPlayer);
+            }
+        }
+            
+        private void Riddle5(string newPlayer)
+        {
+            string response5 = "";
+            string riddle5 = "Decrypt the following message: abaaa abaab abbaa abbab babaa abaab baabb abbaa aabba aabab baabb";
+            if (Tries != 3)
+            {
+            Console.WriteLine(riddle5);
+            response5 = Console.ReadLine();
+            }
+            
+            if (Tries == 3)
+            {
+                CheckTries();
+            }
+            else if (response5 != "I know kung fu" && Tries != 3)
+            {
+                IncreaseTries();
+                Console.WriteLine("Wrong! Try again!");
+                Console.WriteLine(Tries);
+                CheckTries();
+                Riddle5(newPlayer);
+            }
+            else if (response5 == "I know kung fu")
+            {
+                Console.WriteLine("That is correct!");
+                Riddle6(newPlayer);
+            }
+        }
+
+        private void Riddle3(string newPlayer)
+        {
+            string response3 = "";
+            string riddle3 = "Decrypt the following message: 1111001 1101111 1110101 100000 1100001 1110010 1100101 100000 1110100 1101000 1100101 100000 1101111 1101110 1100101";
+            if (Tries != 3)
+            {
+            Console.WriteLine(riddle3);
+            response3 = Console.ReadLine();
+            }
+            
+            if (Tries == 3)
+            {
+                CheckTries();
+            }
+            else if (response3 != "you are the one" && Tries != 3)
+            {
+                IncreaseTries();
+                Console.WriteLine("Wrong! Try again!");
+                Console.WriteLine(Tries);
+                CheckTries();
+                Riddle3(newPlayer);
+            }
+            else if (response3 == "you are the one")
+            {
+                Console.WriteLine("That is correct!");
+                SceneFive(newPlayer);
+            }
+        }
+
         public void SceneFive(string newPlayer)
         {
             Console.WriteLine("You have found a large directory folder name 'DOOMS' within the mainframe. Even its folder icon appears to be somewhat distorted, and cracked in its lower left corner. You wish to open it and reveal its contents before you get in touch with the hacker because it seems highly suspicious (open), but maybe you don't trust the hacker and think delivering it directly to Agent Smith is the safer choice? (deliver)");
@@ -278,6 +376,10 @@ namespace TextGame.Models
             {
                  Console.WriteLine("Screw it! You know how to do this and you don't need Agent Smith or anyone else to help you. You're tired of being a puppet. You scroll to the bottom of the file and see a link that simply says 'DEPLOY'...you click it.");
                  Console.WriteLine("....you start to feel dizzy...the walls fall away....you look down and you're clutching...a TEDDY BEAR?? You blink and look around. Strangers swarm around you. Very tall strangers. You cry out-- and stop yourself. That.. is not your voice. One of the tall strangers walks up to you and asks, 'Little girl, are you lost?' ");
+                 if (newDifficulty == "red")
+                 {
+                     Scene6(newPlayer);
+                 }
             }
             else if (response == "contact") 
             {
@@ -292,12 +394,40 @@ namespace TextGame.Models
                 {
                 Console.WriteLine("You scroll to the bottom of the file and see a link that simply says 'DEPLOY'...you click it.");
                 Console.WriteLine("....you start to feel dizzy...the walls fall away....you look down and you're clutching...a TEDDY BEAR?? You blink and look around. Strangers swarm around you. Very tall strangers. You cry out-- and stop yourself. That.. is not your voice. One of the tall strangers walks up to you and asks, 'Amelia?' He scoops you up and gives you a tight hug. You say, 'Whoa. That was crazy. What is going on? Do I know you?' The man looks into your eyes. 'You're not Amelia.. What have you done with her mind??'");
+                if (newDifficulty == "red")
+                {
+                    Scene7(newPlayer);
+                }
                 }
                 if(choice == "stay")
                 {
                     Console.WriteLine("You've done you're risk assessment...and you've chosen to stay. Although this world may not be real, you have it pretty good here. You're a skilled programmer and a notorious hacker, you have an AMAZING My Little Pony collection and, dammit, people like you! You live out the rest of your days happy and, aside from the odd flashbacks of hula hoops and teddy bears and that pesky Mr. Smith spamming your inbox...satisfied!");
+                    if (newDifficulty == "red")
+                    {
+                        Scene8(newPlayer);
+                    }
                 }
             } 
         } 
+
+        public void Scene6(string newPlayer)
+        {
+            Console.WriteLine("You reply to the man with, 'yeah I'm out man' and run the other way as fast as your short little legs will carry you. You find a dark alleyway along the path to catch your breath. Heart pounding and mind racing, you are faced with a choice. You MUST get to a computer. You really only have the feasible options to ask for help (ask), or go it alone as a six year old girl (alone)");
+            string response = Console.ReadLine();
+
+            if (reponse == "ask")
+            {
+                Console.WriteLine("Eventually, you wander from the alley and find who appears to be a trustworthy stranger. You approach and say, 'Excuse me, I am trapped in the body of a small child, but I'm not one! I am a man and I work at Technicorp. Can you take me there? (whilst looking as adorable as possible.'");
+                Console.WriteLine("To which, the stranger, with much confusion, says 'Sure, I'll help you.'");
+
+                Console.WriteLine("They didn't help you. You end up at the Child Services, who ignore your protestations and deliver you to a nice Amish family in western Pennsylvania. You do not touch a computer for the next twenty years. And you churn butter. For twenty years. gg. Thanks for playing!");
+            }
+            else if (response == "alone")
+            {
+                Console.WriteLine("You leave the alleyway and find the nearest cafe, in which, you have rationalized the only option is to steal a hipster's laptop. Unfortunately for you, there is only one hipster with a whole-ass computer in the cafe. You can't physically steal it, so you wait until they go to the bathroom to utilize it.")
+            }
+        }
     }
 }
+
+                
