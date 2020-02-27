@@ -75,14 +75,71 @@ namespace TextGame.Models
             {
                 Console.WriteLine("Agent Smith: 281-330-8004");
                 Console.WriteLine("Call Agent Smith?");
+                Console.WriteLine("Type 'yes' to call, type 'no' to ignore");
                 string call = Console.ReadLine();
                 if ( call == "yes")
                 {
-                    SceneThree( call, newPlayer);
+                    SceneThree(newPlayer);
+                }
+                else if (call == "no")
+                {
+                    Console.WriteLine("You decide to ignore the message. You've got far too much work to do and don't have time to mess around with mysterious Agents.");
+                    Console.WriteLine("All of a sudden, your screen flickers and you see a message in your console: Is this " + newPlayer + "? I desperately need to talk to you!");
+                    Scene3(newPlayer);
                 }
             }
         }
-        public void SceneThree(string call, string newPlayer)
+
+        public void Scene3(string newPlayer)
+        {
+            Console.WriteLine("Type 'yes' for yes and type 'no' to ignore.");
+            string response = Console.ReadLine();
+            if (response == "yes")
+            {
+                Console.WriteLine(newPlayer + " there is so much I have to tell you! First, I know you have a tattoo on the inner side of your left arm, is it of the numbers 011001001?");
+                Console.WriteLine("You don't need to look, you know what your tattoo is. You also know that it's NOT 011001001.");
+                Console.WriteLine("To tell the hacker that your tattoo is actually of a really cool horse, type 'reveal', to lie and say it is the number he gave you, type 'lie'.");
+                Scene4(newPlayer);
+            } 
+            else if (response == "no")
+            {
+                Console.WriteLine("Okay. You're clearly too busy for this. Bye!");
+                Console.WriteLine("Deleting all files from your hard drive.....");
+                Console.WriteLine("GAME OVER");
+            }
+        }
+
+        public void Scene4(string newPlayer)
+        {
+            string response = Console.ReadLine();
+            if (response == "reveal")
+            {
+                Console.WriteLine("Oh...a...what? Um...heheh I think I have the wrong person. Forget this ever happened. OR ELSE.");
+                Console.WriteLine("Deleting all files from your hard drive.....");
+            }
+            else if (response == "lie")
+            {
+                Console.WriteLine("I bet you're wondering how I know so much about you...or the person you THINK you are...I'm willing to give you this information in exchange for your help with the top secret Assimilation Project. We need you to use your unparalleled encryption skills to encrypt and protect a very important file.");
+                Console.WriteLine("Do you want to help the mysterious hacker and retrieve the information (type 'help')? Or do you choose not to trust them (type 'sus').");
+                Scene5(newPlayer);
+            }
+        }
+
+        public void Scene5(string newPlayer)
+        {
+            string response = Console.ReadLine();
+            if (response == "sus")
+            {
+                Console.WriteLine("The phone rings...it could be your boss so you pick it up...");
+                SceneThree(newPlayer);
+            }
+            else if (response == "help")
+            {
+                Console.WriteLine("In order to properly encrypt the file, you must answer the following three riddles correctly:");
+                Riddle1(newPlayer);
+            }
+        }
+        public void SceneThree(string newPlayer)
         {
             Console.WriteLine("*Agent Smith answers immediately.");
             Console.WriteLine("Hello " + newPlayer + ". My name is Agent Smith. I desperately need your help in the fight against Facless, Destroyer of Worlds. We need you to help us hack into Facless's MAINFRAME and uncover his evil plan! Whatever you do, DO NOT open what it is you find. You could trigger a drastic chain of events.");
@@ -189,7 +246,7 @@ namespace TextGame.Models
             
         public void SceneFive(string newPlayer)
         {
-            Console.WriteLine("You have found a large directory folder name 'DOOMS' within the mainframe. Even its folder icon appears to be somewhat distorted, and cracked in its lower left corner. Do you wish to open it and reveal its contents (open), or, deliver it directly to Agent Smith? (deliver)");
+            Console.WriteLine("You have found a large directory folder name 'DOOMS' within the mainframe. Even its folder icon appears to be somewhat distorted, and cracked in its lower left corner. You wish to open it and reveal its contents before you get in touch with the hacker because it seems highly suspicious (open), but maybe you don't trust the hacker and think delivering it directly to Agent Smith is the safer choice? (deliver)");
 
             string response = Console.ReadLine();
 
@@ -199,7 +256,7 @@ namespace TextGame.Models
 
                 SceneSix(newPlayer);
             }
-            else 
+            else if (response == "deliver")
             {
                 Console.WriteLine("You contact Agent Smith and send him the file without peering into its contents. He responds immediately, with an evil laugh 'muahahaha'. My dear " + newPlayer + ", a great service you have done for me. Unfortunately for you, your true identity will never be revealed, as you are not who you believe yourself to be... AMELIA");
 
