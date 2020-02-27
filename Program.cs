@@ -12,8 +12,8 @@ public class Program
             // string newDifficulty = Console.ReadLine();
             // if (newDifficulty == "easy")
       
-            Game newGame = new Game(true, newPlayer);
-            newGame.StartGame(newPlayer);
+            Game newGame = new Game(true, newPlayer, 0);
+            newGame.StartGame(newPlayer, 0);
             newGame.SceneOne(newPlayer);
         
     }
