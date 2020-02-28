@@ -1,14 +1,176 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+    "signature": "9a1659856eabac2a681ef121d09d69311ea51304"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.2": {
       "Game/1.0.0": {
+        "dependencies": {
+          "Figgle": "0.3.0"
+        },
         "runtime": {
           "Game.dll": {}
+        }
+      },
+      "Figgle/0.3.0": {
+        "dependencies": {
+          "System.IO.Compression.ZipFile": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Figgle.dll": {
+            "assemblyVersion": "0.3.0.0",
+            "fileVersion": "0.3.0.0"
+          }
+        }
+      },
+      "runtime.native.System/4.3.0": {},
+      "runtime.native.System.IO.Compression/4.3.0": {},
+      "System.Buffers/4.3.0": {
+        "dependencies": {
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Diagnostics.Tracing": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Threading": "4.3.0"
+        }
+      },
+      "System.Collections/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Diagnostics.Debug/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Diagnostics.Tracing/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Globalization/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.IO/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.IO.Compression/4.3.0": {
+        "dependencies": {
+          "System.Buffers": "4.3.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.Handles": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0",
+          "runtime.native.System": "4.3.0",
+          "runtime.native.System.IO.Compression": "4.3.0"
+        },
+        "runtimeTargets": {
+          "runtime/unix/lib/_._": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtime/win/lib/_._": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "System.IO.Compression.ZipFile/4.3.0": {
+        "dependencies": {
+          "System.Buffers": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.IO.Compression": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.IO.FileSystem.Primitives": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.Encoding": "4.3.0"
+        }
+      },
+      "System.IO.FileSystem/4.3.0": {
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.IO.FileSystem.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Handles": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.IO.FileSystem.Primitives/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Reflection/4.3.0": {
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Reflection.Primitives/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Resources.ResourceManager/4.3.0": {
+        "dependencies": {
+          "System.Globalization": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Runtime/4.3.0": {},
+      "System.Runtime.Extensions/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Runtime.Handles/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Runtime.InteropServices/4.3.0": {
+        "dependencies": {
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Handles": "4.3.0"
+        }
+      },
+      "System.Text.Encoding/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
+      "System.Threading/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Threading.Tasks/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
         }
       }
     }
@@ -18,6 +180,167 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Figgle/0.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jfS1fHB6UavaPk0meXqBr5ENtA+XVBPQtOJjSAoTwQfD6r08dTY4fTb/WMFUdnquvkRO5krIPOlOHTN+C9MkJw==",
+      "path": "figgle/0.3.0",
+      "hashPath": "figgle.0.3.0.nupkg.sha512"
+    },
+    "runtime.native.System/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3oxlUc1NsH4UEhoFnIqzIs1nr0CSHT7ad4Fj8+m101cwYrrlY42z9sVzUuRV90yqoWrS8dms2wLibopzaBOCmg==",
+      "path": "runtime.native.system/4.3.0",
+      "hashPath": "runtime.native.system.4.3.0.nupkg.sha512"
+    },
+    "runtime.native.System.IO.Compression/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8zrxiKuoQ2IG2UA1n6ZXvqhw7HedxM2wL1AUM2a8y/G1pIkza+rUX/1S6wU7VefDHSQ1KnILSgFKkpxBKQvRCA==",
+      "path": "runtime.native.system.io.compression/4.3.0",
+      "hashPath": "runtime.native.system.io.compression.4.3.0.nupkg.sha512"
+    },
+    "System.Buffers/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/i5mknvKoP8mXzpBpHXtgtuWzNtcV+QKJhk4DZMEEbakYWBzpgM3Ba6RDEx5jcizgwmzEB1nUNHHGxZxpf+wXg==",
+      "path": "system.buffers/4.3.0",
+      "hashPath": "system.buffers.4.3.0.nupkg.sha512"
+    },
+    "System.Collections/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-F7Shyjx62BTtNQcjS9dotO/01kx3zexWZeZ0f2KvtwTkVSqVJ3jF44q7Jy6pMD3NggZgxOdKRJ060TXRGu4qKA==",
+      "path": "system.collections/4.3.0",
+      "hashPath": "system.collections.4.3.0.nupkg.sha512"
+    },
+    "System.Diagnostics.Debug/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NsaRzbsH0s2AAtenAED3+MxHu/mYp78+I+OoVtzjw1Em1fwjQIYW9YxuMgfr5GOFz12GrrLDP/255GRSgKDZzA==",
+      "path": "system.diagnostics.debug/4.3.0",
+      "hashPath": "system.diagnostics.debug.4.3.0.nupkg.sha512"
+    },
+    "System.Diagnostics.Tracing/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2Vm/Q7dxiwVDaiKcXBoS32nh12m2xO0eC3SNm8Qs9T9aOJcPI7SAh5AnwSgwn/Q+bCdF0kykE1tdRkGQabzSJg==",
+      "path": "system.diagnostics.tracing/4.3.0",
+      "hashPath": "system.diagnostics.tracing.4.3.0.nupkg.sha512"
+    },
+    "System.Globalization/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P9F3kzdmaac/c6u5EmuUtK6tmtRD9rCRY8XVxtL7SpTLSLGwR6eEYYdEe4ftvkCMDO2k7jFLeyyGd1sWWbsoMw==",
+      "path": "system.globalization/4.3.0",
+      "hashPath": "system.globalization.4.3.0.nupkg.sha512"
+    },
+    "System.IO/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7cZ5hhc0ofuEdsBer3/YRUUi/B9Sku/vxsig6GlSx68RDhg+0yoslO8+FiUDSLWNmCaYwKg15aKvii4Tu82Ncg==",
+      "path": "system.io/4.3.0",
+      "hashPath": "system.io.4.3.0.nupkg.sha512"
+    },
+    "System.IO.Compression/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-o4tZziZgwCzaXia7nPl/cthKuLWyOE2gu5Ad0DhWAan7v1niqnLM79MSoF0XtGkKmKay/9C5bUqFX+5OxTwzGg==",
+      "path": "system.io.compression/4.3.0",
+      "hashPath": "system.io.compression.4.3.0.nupkg.sha512"
+    },
+    "System.IO.Compression.ZipFile/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ngwRrrasFxXD0MaesClwoZXprC4q3VIzWb9RPg4EG/GMuVSHB2cPF9XXy5AcXFGBWPEXD5G8LdnItYafntWwjw==",
+      "path": "system.io.compression.zipfile/4.3.0",
+      "hashPath": "system.io.compression.zipfile.4.3.0.nupkg.sha512"
+    },
+    "System.IO.FileSystem/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TZd4XvfCOx0MJ6q1al+LueriA2lpyuc0i68h34UvecWc5jwcw2OBhDzRflQ94qPebfjStCqa//WKhu53wISK8Q==",
+      "path": "system.io.filesystem/4.3.0",
+      "hashPath": "system.io.filesystem.4.3.0.nupkg.sha512"
+    },
+    "System.IO.FileSystem.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-z7mOB42aN/gLjVPhZ9vY/wwjNMPjK9wXPtccGhugrXzMKGaWtGZTAMtgtO9D3ajvu2yZMgT1U+HMnEl4AzpsHg==",
+      "path": "system.io.filesystem.primitives/4.3.0",
+      "hashPath": "system.io.filesystem.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-O/2qdu0p5+9nu8m5hppEzOuITXAzyRY1KMGVpqMlkmRc2LY6HPzcMdOEeTH5I3PWLhKg3dFI9mqgq/WM6KXryQ==",
+      "path": "system.reflection/4.3.0",
+      "hashPath": "system.reflection.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VfohYFlJkcBHX75F8Al8PVUfIovYdDPd9ZRL8ZQLt0avWCeO+R04lYgXKLGvE8kJ1ZVelwL6qiGZJjjgu9rNLQ==",
+      "path": "system.reflection.primitives/4.3.0",
+      "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.Resources.ResourceManager/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Mz5CJTmj8aDRaiIeDghQZvkK79WBdjQ5sZ6VIcmnZ0k/VacwgEbCJpl7MwGXiQhhMzXA0bakzKATVtf5+0aUPA==",
+      "path": "system.resources.resourcemanager/4.3.0",
+      "hashPath": "system.resources.resourcemanager.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pCzSpwI+761uUvv0wlGGg+PbFuHkREkc60wRsMdYaZrqEfn5Bvu7isNSWWocOz8AVe/umpx6PvZN0QuaxG+tnQ==",
+      "path": "system.runtime/4.3.0",
+      "hashPath": "system.runtime.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.Extensions/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aPkPYmvwfFyDG+cHrQA7lplz9DQxiUFVRhlWJKG1eg4GEn1JRqY3BqpIegfDUZBaBKPHOR+cvuKOlhFonaaHEQ==",
+      "path": "system.runtime.extensions/4.3.0",
+      "hashPath": "system.runtime.extensions.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.Handles/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dyzJjAv9Bh0JC9TEN44bF8fJIDM0ker8dBI/msGUah07VmlOqEudfuf8trlFm34aTfTzzuXYYa4+xNe+8GC6qg==",
+      "path": "system.runtime.handles/4.3.0",
+      "hashPath": "system.runtime.handles.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.InteropServices/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-y7bL7g1jgzOkygM8wtXbVRnKPPU7QcJ55vzfKyrg3jw8T9kkQzWsPmN00RAGKwl86hBpQyXpdg7zRz8Ya8T1yA==",
+      "path": "system.runtime.interopservices/4.3.0",
+      "hashPath": "system.runtime.interopservices.4.3.0.nupkg.sha512"
+    },
+    "System.Text.Encoding/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n3i5/BmfmBGHzjYnvCG0rND3YPipeiALVxX1ZwiM8CaqzU2t4KVHLrVI1k1VvAcc/HEpyAB+c6v/Jfnbp6ggcQ==",
+      "path": "system.text.encoding/4.3.0",
+      "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
+    },
+    "System.Threading/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KUJsr1mDBEtTBASo+vh+Cjm6C/tGKGY8aAZUkjKGI3DVbsvPCUYnVNSO1X1wvrwO6t3pFTc33FISc5Hy3gIIvg==",
+      "path": "system.threading/4.3.0",
+      "hashPath": "system.threading.4.3.0.nupkg.sha512"
+    },
+    "System.Threading.Tasks/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-h1AGMGav1oTAdD9zLhN077EsOOKZ/Di3dnG/NqeE3RZhnpimRniRoU5U+YEfHIpUoklZHtn0/h4A1BjPXn6TjQ==",
+      "path": "system.threading.tasks/4.3.0",
+      "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     }
   }
 }
