@@ -6,7 +6,9 @@ public class Program
 {
     public static void Main()
     {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(Figgle.FiggleFonts.Cosmike.Render("MCGUGINBEEN"));
+            Console.WriteLine(Figgle.FiggleFonts.Cosmike.Render("~everywhen~"));
             Console.WriteLine("Please enter your name:");
             string newPlayer = Console.ReadLine();
             Console.WriteLine("Choose your difficulty level: Blue Pill (blue) or Red Pill (red):");
